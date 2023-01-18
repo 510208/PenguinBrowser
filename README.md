@@ -2,8 +2,11 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/510208/PenguinBrowser?color=brightgreen&style=for-the-badge)](https://github.com/510208/NotUseComputer/)
 [![](https://img.shields.io/badge/Blog-510208's%20Blog-brightgreen?style=for-the-badge&logo=appveyor)](https://sam0616.pixnet.net)
+![GitHub all releases](https://img.shields.io/github/downloads/510208/PenguinBrowser/total?color=%2300FF00&style=for-the-badge)
 ![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=for-the-badge&logo=appveyor)
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X8X4CZE3V)
+[![Latest Download](https://img.shields.io/badge/Download-Latest-green?color=brightgreen&style=for-the-badge)](https://github.com/510208/PenguinBrowser/releases/latest)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/510208/PenguinBrowser?style=for-the-badge)
 
 ## 🔲 目錄
 
@@ -14,6 +17,8 @@
 [😍 關於我](#-關於我)
 
 [📄 授權](#-授權)
+
+[🔻 下載](#-下載點)
 
 ## 💯 關於
 
@@ -69,6 +74,12 @@ ___
 
 或是直接安裝IE11：
 [💬 IE11連結](/IE11/IE11_Link.md)
+
+## 🔻 下載點
+
+[![Latest Download](https://img.shields.io/badge/Download-Latest-green?color=brightgreen&style=for-the-badge)](https://github.com/510208/PenguinBrowser/releases/latest)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/510208/PenguinBrowser?style=for-the-badge)
+
 
 ## 😍 關於我
 
