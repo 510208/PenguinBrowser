@@ -5,8 +5,8 @@ Begin VB.Form frmAbout
    BorderStyle     =   3  '雙線固定對話方塊
    Caption         =   "關於我的應用程式"
    ClientHeight    =   3555
-   ClientLeft      =   2340
-   ClientTop       =   1935
+   ClientLeft      =   15465
+   ClientTop       =   1665
    ClientWidth     =   5730
    ClipControls    =   0   'False
    Icon            =   "frmAbout.frx":0000
@@ -17,6 +17,7 @@ Begin VB.Form frmAbout
    ScaleMode       =   0  '使用者自訂
    ScaleWidth      =   5380.766
    ShowInTaskbar   =   0   'False
+   StartUpPosition =   3  '系統預設值
    Begin VB.PictureBox picIcon 
       Appearance      =   0  '平面
       AutoSize        =   -1  'True
@@ -52,6 +53,28 @@ Begin VB.Form frmAbout
       TabIndex        =   2
       Top             =   3075
       Width           =   1245
+   End
+   Begin VB.Label Label2 
+      Appearance      =   0  '平面
+      BackColor       =   &H80000005&
+      BorderStyle     =   1  '單線固定
+      ForeColor       =   &H80000008&
+      Height          =   255
+      Left            =   1560
+      TabIndex        =   8
+      Top             =   3240
+      Width           =   2655
+   End
+   Begin VB.Label Label1 
+      Appearance      =   0  '平面
+      BackColor       =   &H80000005&
+      Caption         =   "本程式置放於："
+      ForeColor       =   &H80000008&
+      Height          =   255
+      Left            =   240
+      TabIndex        =   7
+      Top             =   3240
+      Width           =   1335
    End
    Begin VB.Line Line1 
       BorderColor     =   &H00808080&
@@ -117,7 +140,7 @@ Begin VB.Form frmAbout
       BackColor       =   &H80000005&
       Caption         =   "警告: ...此軟體為學術研究使用，禁止販賣此軟體"
       ForeColor       =   &H80000008&
-      Height          =   825
+      Height          =   585
       Left            =   255
       TabIndex        =   4
       Top             =   2625
@@ -172,6 +195,7 @@ Private Sub Form_Load()
     lblVersion.Caption = "版本 " & App.Major & "." & App.Minor & "." & App.Revision
     lblTitle.Caption = App.Title
     lblDescription.Caption = "此軟體為企鵝哥所編寫的簡易網頁瀏覽器，僅供學術研究及教學、個人使用，禁止在任何狀態(無論是否已改作)進行商業販賣。" & vbNewLine & "此軟體採用IE11、IE12內核簡易編寫，請確定你的電腦上已啟用IE11/IE12。"
+    Label2.Caption = App.Path
 End Sub
 
 Public Sub StartSysInfo()
@@ -257,3 +281,4 @@ GetKeyError:      ' 錯誤發生後清除...
     GetKeyValue = False                                     ' 傳回失敗的訊息
     rc = RegCloseKey(hKey)                                  ' 關閉註冊機碼
 End Function
+

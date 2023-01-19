@@ -33,7 +33,7 @@ Begin VB.Form frmSplash
       Top             =   60
       Width           =   7080
       Begin VB.Image imgLogo 
-         Height          =   2385
+         Height          =   1815
          Left            =   360
          Picture         =   "frmSplash.frx":10CA
          Stretch         =   -1  'True
@@ -183,12 +183,13 @@ Option Explicit
 
 Private Sub Form_KeyPress(KeyAscii As Integer)
     Me.Hide
-    Form1.Show
+    Main_Browser.Show
 End Sub
 
 Private Sub Form_Load()
     lblVersion.Caption = "ª©¥» " & App.Major & "." & App.Minor & "." & App.Revision
     lblProductName.Caption = App.Title
+    imgLogo.Picture = frmSplash.Icon
 End Sub
 
 Private Sub Frame1_Click()
