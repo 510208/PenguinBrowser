@@ -13,7 +13,7 @@ def check_for_updates():
     release_info = json.loads(response.text)
 
     # Compare the current version with the latest release
-    current_version = "1.0.3"
+    current_version = "1.0.4"
     latest_version = release_info["tag_name"]
     if latest_version > current_version:
         msg_YNUpdate = messagebox.askyesno('Update Checker','有一個新版本可以更新，該版本版本號為'+latest_version+'，按下"確認"下載更新版本。')
