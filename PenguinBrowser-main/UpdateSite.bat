@@ -1,0 +1,1 @@
+start https://github.com/510208/PenguinBrowser/releases/latest
