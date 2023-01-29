@@ -189,7 +189,6 @@ End Sub
 Private Sub Form_Load()
     lblVersion.Caption = "ª©¥» " & App.Major & "." & App.Minor & "." & App.Revision
     lblProductName.Caption = App.Title
-    imgLogo.Picture = frmSplash.Icon
 End Sub
 
 Private Sub Frame1_Click()

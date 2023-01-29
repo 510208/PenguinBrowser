@@ -161,13 +161,6 @@ Begin VB.Form Main_Browser
          Caption         =   "開啟HTML文件並載入(&O)"
          Shortcut        =   ^O
       End
-      Begin VB.Menu dashtext2 
-         Caption         =   "-"
-      End
-      Begin VB.Menu about 
-         Caption         =   "關於(&A)"
-         Shortcut        =   {F1}
-      End
    End
    Begin VB.Menu manage 
       Caption         =   "管理(&M)"
@@ -208,6 +201,34 @@ Begin VB.Form Main_Browser
       Begin VB.Menu code 
          Caption         =   "...檢視網頁原始碼"
          Shortcut        =   {F12}
+      End
+   End
+   Begin VB.Menu debugSoftware 
+      Caption         =   "軟體除錯(&R)"
+      Begin VB.Menu pythonInstaller 
+         Caption         =   "安裝Python3.11.1(&P)"
+      End
+      Begin VB.Menu installIE 
+         Caption         =   "安裝Internet Explorer11(&I)"
+      End
+      Begin VB.Menu dashtext3 
+         Caption         =   "-"
+      End
+      Begin VB.Menu logStart 
+         Caption         =   "開啟除錯檔(&D)"
+      End
+   End
+   Begin VB.Menu helperChooice 
+      Caption         =   "說明(&H)"
+      Begin VB.Menu about 
+         Caption         =   "關於(&A)"
+         Shortcut        =   {F1}
+      End
+      Begin VB.Menu dashtext4 
+         Caption         =   "-"
+      End
+      Begin VB.Menu checkUpdate 
+         Caption         =   "檢查更新(&U)"
       End
    End
 End
@@ -264,6 +285,10 @@ End Sub
 
 Private Sub cancelload_Click()
 Call Command5_Click
+End Sub
+
+Private Sub checkUpdate_Click()
+Shell "cmd.exe /c start " & "CheckForUpdate.py"
 End Sub
 
 Private Sub code_Click()
@@ -340,11 +365,19 @@ Private Sub google_Click()
 WebBrowser1.Navigate ("https://google.com")
 End Sub
 
+Private Sub installIE_Click()
+Shell "cmd.exe /c start " & "https://github.com/510208/PenguinBrowser/blob/main/IE11/IE11_Link.md"
+End Sub
+
 Private Sub load_Click()
 Call Command4_Click
 End Sub
 
 
+
+Private Sub logStart_Click()
+Shell "cmd.exe /c start " & App.Path & "/log/log.txt"
+End Sub
 
 Private Sub openhtmlfile_Click()
 'CancelError 為 True。
@@ -367,6 +400,10 @@ End Sub
 
 Private Sub pgbsearch_Click()
 WebBrowser1.Navigate ("https://cse.google.com/cse?cx=d13201a0e272750fd#gsc.tab=0")
+End Sub
+
+Private Sub pythonInstaller_Click()
+MsgBox "Python3.11.1存在於" & App.Path & "\Python3.11.1\python-3.11.1-amd64.zip"
 End Sub
 
 Private Sub Timer1_Timer()
